@@ -1,121 +1,73 @@
-**Overview**
+# React + TypeScript + Vite
 
-Diabetes Compass OnTheGo is a mobile application designed to help people living with diabetes monitor and manage their health anytime and anywhere. The app works as a mobile extension of the Diabetes Compass web platform and is available free of charge to all registered Diabetes Compass users.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-The application allows users to track essential health data such as blood glucose levels, insulin intake, calorie consumption, physical activity, and weight, helping them maintain or reduce weight while keeping their diabetes under control.
+Currently, two official plugins are available:
 
-Diabetes Compass OnTheGo provides a simple and convenient way to record daily health information and synchronize it with the Diabetes Compass website.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-**Features**
+## React Compiler
 
-  Blood glucose tracking
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-  Insulin intake logging
+## Expanding the ESLint configuration
 
-  Calorie tracking
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-  Physical activity tracking
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-  Weight monitoring
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-  Daily and historical data overview
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-  Synchronization with Diabetes Compass web platform
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-  Secure user authentication
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-  Simple and intuitive interface
-
-  Free access for registered users
-
-**Target Users**
-
-This application is intended for:
-
-  People diagnosed with diabetes (Type 1, Type 2, or prediabetes)
-
-  Individuals managing their blood glucose levels
-
-  Users aiming to maintain or lose weight
-
-  Registered users of the Diabetes Compass website
-
-**How It Works**
-
-  Users register on the Diabetes Compass website
-
-  Users log in to the Diabetes Compass OnTheGo mobile app
-
-**Users record daily data including:**
-
-  Glucose measurements
-
-  Insulin intake
-
-  Meals and calories
-
-  Physical activities
-
-  Body weight
-
-  Data is synchronized automatically with the Diabetes Compass web platform.
-
-**Benefits**
-
-  Better diabetes self-management
-
-  Improved awareness of glucose patterns
-
-  Support for healthy lifestyle habits
-
-  W eight management assistance
-
-  Centralized health data tracking
-
-  Easy access to data anytime
-
-**Requirements**
-
-  Registered account on the Diabetes Compass website
-
-  Internet connection for synchronization
-
-  Smartphone device (Android or iOS)
-
-**Installation**
-Android
-
-  Download and install the application from the Google Play Store (link to be provided).
-
-iOS
-
-  Download and install the application from the Apple App Store (link to be provided).
-
-**Data Privacy**
-
-User data is securely stored and synchronized with the Diabetes Compass web platform. Access to personal data requires user authentication.
-
-The application is designed to protect user privacy and ensure secure handling of health-related information.
-
-**Future Improvements**
-
-  Integration with glucose meters and wearable devices
-
-  Nutrition database integration
-
-  Advanced analytics and reports
-
-  Medication reminders
-
-  Notifications and alerts
-
-  Doctor data sharing
-
-**Support**
-
-For support and questions, please contact the Diabetes Compass support team.
-
-**License**
-
-This project is intended for public health support and is available free of charge to registered Diabetes Compass users.
-
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

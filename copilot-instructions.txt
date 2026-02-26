@@ -31,7 +31,7 @@ After applying After applying the migration, keep a copy of SQL file to track ch
 #Authentication and User Management
 USE Supabase for storage and authentication, and implement secure authentication mechanisms to protect user data and ensure that only authorized users can access their information.
 #Authentication and User Management
-Use Supabase's authentication features to manage user registration, login, and password
+Use Supabase authentication features to manage user registration, login, and password
  recovery processes.
 # Key Features
 Blood glucose tracking with historical records
