@@ -1,0 +1,14 @@
+# Diabetes Compass OnTheGo is a free mobile application designed to support people living with diabetes in managing their health anytime and anywhere. Built as an extension of the Diabetes Compass web platform, the app provides a convenient way for registered users to monitor key health indicators and maintain better control over their condition.
+
+#Architecture and Technology Stack
+Classical Client - Server App:
+Front end - JS App,HTML, CSS, JavaScript and Bootstrap
+Backend: Supabase as a backend
+Database - PostgreSQL
+Authentication and storage - Supabase auth
+Build tools: Node.js, npm, Vite.
+API: Supabase REST API
+Hosting: Netlify.
+Source code: Github
+
+# Key Features
