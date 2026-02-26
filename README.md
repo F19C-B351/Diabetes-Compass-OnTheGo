@@ -1,4 +1,4 @@
-Overview
+**Overview**
 
 Diabetes Compass OnTheGo is a mobile application designed to help people living with diabetes monitor and manage their health anytime and anywhere. The app works as a mobile extension of the Diabetes Compass web platform and is available free of charge to all registered Diabetes Compass users.
 
@@ -6,7 +6,7 @@ The application allows users to track essential health data such as blood glucos
 
 Diabetes Compass OnTheGo provides a simple and convenient way to record daily health information and synchronize it with the Diabetes Compass website.
 
-Features
+**Features**
 
 Blood glucose tracking
 
@@ -28,7 +28,7 @@ Simple and intuitive interface
 
 Free access for registered users
 
-Target Users
+**Target Users**
 
 This application is intended for:
 
@@ -40,13 +40,13 @@ Users aiming to maintain or lose weight
 
 Registered users of the Diabetes Compass website
 
-How It Works
+**How It Works**
 
 Users register on the Diabetes Compass website
 
 Users log in to the Diabetes Compass OnTheGo mobile app
 
-Users record daily data including:
+**Users record daily data including:**
 
 Glucose measurements
 
@@ -60,7 +60,7 @@ Body weight
 
 Data is synchronized automatically with the Diabetes Compass web platform.
 
-Benefits
+**Benefits**
 
 Better diabetes self-management
 
@@ -74,7 +74,7 @@ Centralized health data tracking
 
 Easy access to data anytime
 
-Requirements
+**Requirements**
 
 Registered account on the Diabetes Compass website
 
@@ -82,4 +82,40 @@ Internet connection for synchronization
 
 Smartphone device (Android or iOS)
 
-Installation
+**Installation**
+Android
+
+Download and install the application from the Google Play Store (link to be provided).
+
+iOS
+
+Download and install the application from the Apple App Store (link to be provided).
+
+**Data Privacy**
+
+User data is securely stored and synchronized with the Diabetes Compass web platform. Access to personal data requires user authentication.
+
+The application is designed to protect user privacy and ensure secure handling of health-related information.
+
+**Future Improvements**
+
+Integration with glucose meters and wearable devices
+
+Nutrition database integration
+
+Advanced analytics and reports
+
+Medication reminders
+
+Notifications and alerts
+
+Doctor data sharing
+
+**Support**
+
+For support and questions, please contact the Diabetes Compass support team.
+
+**License**
+
+This project is intended for public health support and is available free of charge to registered Diabetes Compass users.
+
